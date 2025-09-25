@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blinkit Clone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f6f7fb;
+      color: #333;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #00a86b;
+    }
+    .location {
+      font-size: 14px;
+      color: #777;
+    }
+    .search-bar {
+      flex: 1;
+      margin: 0 20px;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .cart {
+      background: #00a86b;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Banner */
+    .banner {
+      background: #c6f0d4;
+      padding: 20px;
+      text-align: center;
+    }
+    .banner h2 {
+      margin: 0;
+      color: #006d46;
+    }
+    .banner button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #00a86b;
+      border: none;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Service cards */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .service {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .service:hover {
+      transform: scale(1.03);
+    }
+
+    /* Categories */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .category {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .category img {
+      max-width: 50px;
+      display: block;
+      margin: 0 auto 8px;
+    }
+    .category:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">blinkit</div>
+    <div class="location">Currently unavailable<br><small>Anuvrat Marg, Desu Colony...</small></div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search 'milk'">
+    </div>
+    <div class="cart">🛒 1 item ₹279</div>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h2>Paan corner</h2>
+    <p>Your favourite paan shop is now online</p>
+    <button>Shop Now</button>
+  </div>
+
+  <!-- Services -->
+  <div class="services">
+    <div class="service">🖨️ Get printouts in minutes</div>
+    <div class="service">💊 Pharmacy at your doorstep</div>
+    <div class="service">🐶 Pet Care supplies in minutes</div>
+    <div class="service">👶 Baby Care essentials</div>
+  </div>
+
+  <!-- Categories -->
+  <div class="categories">
+    <div class="category"><img src="https://via.placeholder.com/50" alt="">Paan Corner</div>
+    <div class="category"><img src="https://via.placeholder.com/50" alt="">Dairy & Eggs</div>
+    <div class="category"><img src="https://via.placeholder.com/50" alt="">Fruits & Veg</div>
+    <div class="category"><img src="https://via.placeholder.com/50" alt="">Cold Drinks</div>
+    <div class="category"><img src="https://via.placeholder.com/50" alt="">Snacks</div>
+    <div class="category"><img src="https://via.placeholder.com/50" alt="">Breakfast</div>
+    <div class="category"><img src="https://via.placeholder.com/50" alt="">Bakery</div>
+    <div class="category"><img src="https://via.placeholder.com/50" alt="">Rice & Dal</div>
+    <div class="category"><img src="https://via.placeholder.com/50" alt="">Pharma</div>
+    <div class="category"><img src="https://via.placeholder.com/50" alt="">Cleaning</div>
+    <div class="category"><img src="https://via.placeholder.com/50" alt="">Personal Care</div>
+    <div class="category"><img src="https://via.placeholder.com/50" alt="">Pet Care</div>
+  </div>
+
+  <script>
+    // Example JS for search
+    document.querySelector('.search-bar input').addEventListener('keypress', function(e){
+      if(e.key === 'Enter'){
+        alert("You searched for: " + this.value);
+      }
+    });
+  </script>
+</body>
+</html>
